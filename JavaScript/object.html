@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header1" onclick="alert('Click!!')">Text Change1</h1>
+    <h1 id="header1">Text Change2</h1>
+    <h1 id="header3">Occur Event</h1>
+</body>
+</html>
+<script>
+    var h1 = document.getElementsByTagName("h1");//h1태그를 가져와서
+    console.log(h1[0].innerHTML); //h1의 내용 접근
+    h1[0].innerHTML ="JavaScript";
+    h1[1].innerHTML = "Array Able";
+
+    h1 = document.querySelector("#header1");//해당 아이디의 전체 태그를 가져옴
+    console.log(h1.innerHTML)
+
+    h1 = document.getElementById("header1");
+    console.log(h1.innerHTML);
+
+    h1.style.color = "red";
+
+    var header3 = document.getElementById("header3");
+    //함수의 표현식, onclick이벤트가 발생했을 때 호출할 콜백함수를 전달
+    //메모리 관리에 유용
+    /*
+    header3.onclick = function(){
+        alert("Occur Click Event By Function!! ")
+    }
+    */
+   //함수 람다로 표현
+   header3.onclick =()=> {
+    alert("Occur Click Event By Function(lamda)!! ");
+   }
+
+   var arr = [1,2,3,4,5,6,7,8,9,10];
+   var evenArr = [];
+   var oddArr = [];
+   for(i = 0;i<arr.length;i++)
+   {
+        if(arr[i] % 2 == 0)
+            evenArr.push(arr[i]);
+        else
+            oddArr.push(arr[i]);
+    }
+    
+    console.log(evenArr);
+    console.log(oddArr);
+    
+    console.log( arr.filter( x=>x%2==0) );
+    console.log( arr.filter( x=>x%2==1) );
+</script>
