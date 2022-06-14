@@ -7,6 +7,7 @@
     <title>Table Practice</title>
 </head>
 <body>
+
     <table style="width: 80%;border: 1px solid blueviolet; margin: auto; border-collapse: collapse;">
         <!--margin: auto 테이블 중앙 정렬-->
         <!--border-collapse: collapse  테두리 중복 제거-->
@@ -19,6 +20,87 @@
             <td style="border: 1px solid blueviolet ;">2행1열</td>
             <td style="border: 1px solid blueviolet ;">2행2열</td>
         </tr>
+    </table>
+    <h2>상품 구성</h2>
+    <table>
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thead>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>개수</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>3,5000</td>
+            </tr>
+            <tr>
+                
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000</td>
+            </tr>
+            <tr>
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000</td>
+            </tr>
+            <tr>
+                
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>colspan</h2>
+    <table style="border: 1px solid blueviolet ;">
+        <caption>table practice</caption>
+        <thead>
+            <tr>
+                <th>1열</th>
+                <th>2열</th>
+                <th>3열</th>
+                <th>4열</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid blueviolet ;"colspan="3">3칸 합침</td>
+                <td style="border: 1px solid blueviolet ;">1칸</td>
+                
+            </tr>
+            <tr>
+                <td style="border: 1px solid blueviolet ;">1</td>
+                <td style="border: 1px solid blueviolet ;">2</td>
+                <td style="border: 1px solid blueviolet ;">3</td>
+                <td style="border: 1px solid blueviolet ;">4</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid blueviolet ;">1</td>
+                <td style="border: 1px solid blueviolet ;">2</td>
+                <td style="border: 1px solid blueviolet ;">3</td>
+                <td style="border: 1px solid blueviolet ;">4</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid blueviolet ;" colspan="3">3칸 합침</td>
+                <td style="border: 1px solid blueviolet ;">1칸</td>
+                
+            </tr>
+            <tr>
+                <td style="border: 1px solid blueviolet ;">1</td>
+                <td style="border: 1px solid blueviolet ;">2</td>
+                <td style="border: 1px solid blueviolet ;">3</td>
+                <td style="border: 1px solid blueviolet ;">4</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
