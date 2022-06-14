@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTOR</title>
+    <style>
+        p{
+            color: red;
+            font-size: 14pt;
+            background-color: rgb(255, 252, 230);
+            text-align: center;
+            /*padding: 10px;*/ /*padding은 테두리와 내용사이 여백 */
+            padding: 50px 0px 25px 0px; /*top-right-bottom-left 순서로 적용*/
+        }
+        h1, h2{
+            color: darkcyan;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>H1 Selector</h1>
+    <h2 style="color: burlywood ;">H2 Selector</h2> <!-- 스타일 적용 순서 인라인->(html)내부->외부->브라우저기본  -->
+    <p>P Selector 1</p>
+    <p>P Selector 2</p>
+</body>
+</html>
