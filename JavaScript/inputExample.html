@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Example</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var age = prompt("Enter Your Age", 18); //default값(String) 안 넣어주면 IE에서는 Exception 발생
+    if(age >=18) //age String인데 형변환 없이 비교연산 가능(형변환이 자동으로 이루어짐) //연산(+)은 불가능
+    {
+        alert("Able to Vote!!");
+    }
+    else{
+        alert("Unable to Vote..");
+    }
+</script>
