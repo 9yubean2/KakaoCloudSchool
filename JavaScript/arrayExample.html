@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //JAVA의 ArrayList와 유사
+    let arr = [1,2,3,4,5]; //배열이 만들어지고 배열 주소가 저장됨
+    arr.push(6);
+    arr.push(7);
+    arr.push(8);
+    arr.push(9);
+    arr.push(10);
+
+    console.log(arr);
+
+    let words = []; // = Array(); //빈 배열 만들기
+    words.push("rose")
+    words.push("peach");
+    words.push("lily");
+    words.push("berry");
+    console.log(words);
+    console.log(words[0]);//인덱싱 지원
+
+    words = words.concat("milk","president","survey","like")//배열에 data 덧붙이기
+    console.log(words);
+
+    let s = words.join(","); //배열요소들을 하나로 묶을때 사용
+    console.log(s) // 결과값: rose,peach,...,survey,like
+
+    words2 = s.split(","); //,를 기준으로 s를 다시 쪼개서 배열로 만듦
+    console.log(words2); //결과값: ['rose', 'peach', ... , 'like']
+
+</script>

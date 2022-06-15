@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined Type Example 2</title>
+</head>
+<body> 
+    x : <input type="text" name="" id="xValue"> <br/>
+</body>
+</html>
+<script>
+    var x = document.getElementById("xValue");//아이디 오류
+    if (x == undefined)//undefined는 type이라서 "undefined"라고 하지 않는다.
+    {
+        console.log("id Error!!");
+    }
+    else {
+        x.value = "500";
+    }
+</script>
