@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Example</title>
+    <style>
+        /*하위선택자 = 자식+손자 */
+        section p {
+            color: blueviolet;
+        }
+        /*자식선택자 = 자식만! */
+        section > p {
+            color: red;
+        }
+        /**인접형제 선택자 = 요소1의 형제요소 중 첫번째만 적용*/
+        h1 + p {
+            color: green;
+        }
+
+        /**형제 선택자 = 요소1의 형제요소 모두에 적용*/
+        h1 ~ p {
+            color: rgb(255, 196, 0);
+        }
+    </style>
+</head>
+<body>
+    <section> <!--section: 부모요소-->
+        <p>자식요소</p>
+        <div>
+            <p>손자요소</p>
+        </div>
+        <h1>형제 요소</h1>
+        <p>h1의 형제인 p</p>
+        <p>h1의 형제가 아닌 p</p>
+    </section>
+</body>
+</html>
