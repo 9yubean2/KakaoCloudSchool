@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Practice</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let person = {"name":"홍길동", "age":18} 
+    //{key:value} key 중복 불가능
+    //'{"name":"홍길동", "age":18}' 따옴표 안에 들어가 있으면 string으로 인식
+    console.log(person["name"]); // = console.log(person.name);
+    console.log(person["age"]); // =  console.log(person.age);
+    person.address = "서울시"; //key:value 추가 1
+    person["phone"] = "010-0000-0000"; //key:value 추가 2
+    console.log(person);
+
+    //JSONArray
+    let personList = [
+        {"name": "홍길동", "age": 18, "address": "서울시", "phone": "010-0000-0000"},
+        {"name": "A", "age": 19, "address": "인천시", "phone": "010-1111-1111"},
+        {"name": "B", "age": 20, "address": "고양시", "phone": "010-2222-2222"},
+        {"name": "C", "age": 21, "address": "수원시", "phone": "010-3333-3333"}
+    ];
+
+    for(i=0 ; i<personList.length ; i++){
+        console.log(`${personList[i].name}, ${personList[i].age}, ${personList[i].address}, ${personList[i].phone}`);
+    }
+    
+    personList.forEach((item,index)=>{
+        console.log(`${item.name} ${item.age} ${item.address} ${item.phone}`)
+    })
+    
+    
+</script>
