@@ -9,9 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <!--title-->
+    <div class="container-fluid p-5 bg-secondary text-white text-center">
+        <h1>First Bootstrap</h1>
+    </div>
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+          <a class="navbar-brand" href="javascript:void(0)">DIA</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,45 +35,75 @@
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="text" placeholder="Search">
-              <button class="btn btn-primary" type="button">Search</button>
+              <button class="btn btn-dark" type="button">Search</button>
             </form>
           </div>
         </div>
     </nav>
 
+    <!--table-->
     <div class="container mt-3">
         <h2 style="margin-top: 50px;">Board List</h2>
         <!--p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p-->            
         <table class="table">
+            <colgroup>
+                <col width="8%">
+                <col width="*">
+                <col width="12%">
+                <col width="20%">
+                <col width="8%">
+            </colgroup>
           <thead>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Email</th>
+            <tr class="table-secondary">
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+              <th>조회수</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
+              <td>001</td>
+              <td>Title001</td>
+              <td>writer001</td>
+              <td>yyyy-MM-dd hh:mm:ss</td>
+              <td>0000</td>
             </tr>
             <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@example.com</td>
+              <td>002</td>
+              <td>Title002</td>
+              <td>writer002</td>
+              <td>yyyy-MM-dd hh:mm:ss</td>
+              <td>0000</td>
             </tr>
             <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@example.com</td>
+              <td>003</td>
+              <td>Title003</td>
+              <td>writer003</td>
+              <td>yyyy-MM-dd hh:mm:ss</td>
+              <td>0000</td>
             </tr>
           </tbody>
         </table>
       </div>
+
+      <!--paging-->
+      <div class="container mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">First</a></li>
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <li class="page-item"><a class="page-link" href="#">Last</a></li>
+        </ul>
+      </div>
+
+      <div class="container mt-3" style="text-align: right;">
+        <button type="button" class="btn btn-dark">Button</button>
+      </div>
       
-      
-     
-    
 </body>
 </html>
