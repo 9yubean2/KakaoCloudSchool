@@ -19,4 +19,26 @@
     console.log(myFunc(1));
     console.log(myFunc(1,2));
     console.log(myFunc(1,2,3));
+
+    function showMessage(text){
+        /*
+        if (text===undefined){
+            text = 'Empty String';
+        }
+        */
+       text = text || 'Empty String';
+        console.log(text);
+    }
+    showMessage();
+    showMessage("Hello");
+
+    function showCount(count){
+        console.log(count ?? "unknown");
+    }
+    
+    showCount(5); //5
+    showCount(""); //아무것도 출력되지 않음
+    showCount(null); //unknown
+    showCount(); //unknown
+
 </script>
