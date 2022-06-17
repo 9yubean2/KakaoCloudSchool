@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function 2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let numArr = [10, -12, 3, -5, 16, 12, 49, -1, 0, 7];
+    let wordArr = ["school", "hospital", 
+    "assembly", "compile", "object", "class", "function",
+    "procedure", "alt","bread"];
+
+    let stuArr = [{"class":"1", "name":"A", kor:90, eng:90 ,math:90},
+    {"class":"1", "name":"B", kor:80, eng:80 ,math:95},
+    {"class":"2", "name":"C", kor:70, eng:70 ,math:100},
+    {"class":"1", "name":"D", kor:60, eng:60 ,math:85},
+    {"class":"2", "name":"E", kor:50, eng:50 ,math:95},
+    {"class":"2", "name":"F", kor:75, eng:100 ,math:55}];
+
+    //문제1: numArray에서 음수만 찾아내기
+    
+    result = numArr.filter( (x)=> {if(x<0) return x;});
+    console.log(result);
+        
+    
+    //문제2: wordArray에서 단어 길이가 6글자 이상인 것만 추출하기
+    
+    result2 = wordArr.filter( (x)=>{if(x.length>=6) return x;});
+    console.log(result2);
+    
+    //map:요소에 연산을 수행해서 원본데이터는 냅두고 연산된 결과셋을 반환
+    wordArr.filter(a=>a.length>=6)//filter된 새로운 배열이 map()내부로 전달
+            .map( (a)=>a.toUpperCase())//map에서 처리된 새로운 배열이 forEach로 전달
+            .forEach( (a) => {console.log(a);
+            });
+    
+    let tmp = numArr.map((a)=>a*a);
+    console.log(tmp);//map처리 된 배열만 변경되어져서 반환
+    console.log(numArr);//원본데이터 그대로
+    
+    //문제3: class가 1인 학생들과 2인 학생들 분리하기
+    
+    result3 = stuArr.filter( (x)=>{if(x.class==="2") return x;});
+    //console.log(result3[0].kor); result의 키값 접근
+    console.log(result3);
+
+    //문제4: stuArr에 총점하고 평균 계산해서 넣기
+    stuArr.forEach((a) => {
+        a.total = a.kor + a.eng + a.math;
+        a.average = a.total/3;
+    })
+    console.log(stuArr[0]);
+
+    let {name,average} = stuArr[0];//추출 가능!
+    console.log({name,average});
+
+    //sort
+    //numArr.sort();//numArr자체가 정렬되어서 변경
+    numArr.sort( (a,b) => {return b-a});//내림차순
+    console.log("내림차순 numArr");
+    console.log(numArr);
+    numArr.sort( (a,b) => {return a-b});//내림차순
+    console.log("오름차순 numArr");
+    console.log(numArr);
+    //stuArr.sort((a,b)=>{return a.total - b.total});//오름차순
+    stuArr.sort((a,b)=>{return b.total - a.total});//내림차순
+    console.log("내림차순 stuArr");
+    console.log(stuArr);
+
+    stuArr.sort((a,b)=>{return a.total - b.total});//오름차순
+    console.log("오름차순 stuArr");
+    console.log(stuArr);
+
+    console.log("=============MAP============");
+    tmp1 = numArr.map((object,i)=>{
+        console.log(object,i);
+        return object;
+    });
+    console.log(tmp1)
+
+    console.log("=============MAP 2D============");
+    let arr2D = [
+        [1,2,3,4],
+        [5,6,7,8],
+        [9,10,11,12]
+    ];
+
+    arr2D.forEach((arr,i)=>{
+        console.log(arr,i);
+        arr.forEach((item,index)=>{
+            console.log(item,index)
+        });
+    });
+    //문제5: 첫번째 배열에는 2를 곱하고, 두번째 1차원배열은 3을 곱하고, 세번째배열은 4를 곱한다.
+    //map 사용
+    //let tmp = numArr.map((a)=>a*a);
+    arr2D.forEach((arr,i)=>{
+        console.log(arr,i);
+        arr.forEach((item,index)=>{
+            console.log(item*(i+2))
+        });
+    });
+
+    
+    let result33 = arr2D.map((arr,i)=>{
+        let k = i+2;
+        let temp = arr.map((a)=>{
+            return a*k;
+        });
+        //k++;
+        return temp;
+    })
+    console.log(result33);
+    
+</script>

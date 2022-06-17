@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Function</title>
+    <script>
+        //html문서가 모두 메모리에 로딩된 후에 발생하는 이벤트
+        //이벤트가 발생했을 때 함수 호출
+        //1.선언문 사용
+        /*
+        function onLoad() {
+            document.getElementById("xValue").value = 100;
+        }
+        window.onload = onLoad();
+        */
+
+        /* 2.표현식 사용
+        window.onload = function(){
+            document.getElementById("xValue").value = 100;
+        }*/
+
+        //3.화살표 함수 - 내부에서 this 사용불가하므로 사용에 유의
+        window.onload = () => {
+            document.getElementById("xValue").value = 1000;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="xValue">
+</body>
+</html>
+<script>
+
+</script>

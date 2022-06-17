@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHandler</title>
+ </head>
+ <body>
+    <button type="button" onclick="goPress()">PRESS</button>
+    <button type="button" id="btnPress">PRESS2</button>
+ </body>
+ </html>
+ <script>
+    function goPress() {
+        alert("PRESS BUTTON");
+    }
+    window.onload = function(){
+        var btnPress = document.getElementById("btnPress");
+        btnPress.addEventListener("click", () =>{
+            alert("PRESS BUTTON2!");
+        })
+    }
+ </script>
