@@ -12,22 +12,24 @@
 </html>
 <script>
     
+    /*
     async function f() { 
         let promise = new Promise((resolve, reject)=>{
             setTimeout(()=>resolve("COMPLETE!"),1000)
-        });
-        let result = await promise;
+        });//실행한 결과값이 전달되는 게 아니라 객체가 전달되는 것
+        let result = await promise; //프라미스가 이행될 때 까지 기다린다.
 
         alert(result);
      }
+     */
 
-     /*
+     
      async function f(){
-        return 1;
+        return 1;//async 키워드를 써주면 promise객체로 감싸져서 나옴
     }
     f().then((a)=>{
-        console.log(a);
+        alert(a);
     })
-    */
+    
    f();
 </script>

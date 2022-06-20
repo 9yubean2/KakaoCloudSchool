@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Event</title>
+</head>
+<body>
+    <input type="text" onkeypress="inNum()"> <br/>
+
+     <!--0~9 제외 나머지를 입력받지 않음-->
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g,'')"><br/>
+    <input type="number">
+</body>
+</html>
+<script>
+    //키이벤트는 이벤트가 발생해야 사용가능 한글이나 복사붙여넣기는 작동 안된다.
+    //그래서 정규식을 사용하자
+    function inNum() {
+        console.log(event);
+        console.log(event.keyCode);
+        if ( event.keyCode<48 || event.keyCode>57){
+            event.returnValue = false; //숫자만 보이는
+        }
+    }
+
+    /*
+    정규식- 우편번호나 이메일 등 특정 형식을 따르는 데이터를 찾고자 할 때 사용
+     /(패턴)/g -해당패턴을 만족하는 모든 데이터라는 의미
+     /[0-9] : 0-9가 올 수 있다.
+     /[^0-9] : 0-9를 제외한 모든 문자라는 의미
+     this.value.replace(/[^0-9]/g,'') 0-9를 제외한 모든 문자를 찾아서
+     공백으로 바꾸라는 의미. replace는 원본데이터를 수정하지 않고
+     수정된 데이터를 반환
+     */
+</script>

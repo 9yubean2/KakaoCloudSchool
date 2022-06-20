@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer2</title>
+</head>
+<body>
+    <h1 id="clock"></h1><br/>
+    <button type="button" id="btnStart">START</button>
+    <button type="button" id="btnStop">STOP</button>
+</body>
+</html>
+<script>
+    let timerID = null;
+    window.onload = () =>{
+        displayClock();//맨 처음에 한번
+        document.getElementById("btnStart").addEventListener("click",()=>{
+            if (timerID == null){
+                timerID = setInterval(displayClock, 1000);//반환값 받기
+            }
+        });
+        
+        document.getElementById("btnStop").addEventListener("click",()=>{
+            if (timerID != null){
+                clearInterval(timerID);//반환값 받기
+                timerID = null;
+            }
+        });
+        
+        //만들어진 interval 객체 참조를 반환
+        
+    }
+    function displayClock() {
+        var now = new Date(); //현재 날짜와 시간을 가져옴
+        document.getElementById("clock").innerHTML = now.toLocaleTimeString();
+    }
+</script>

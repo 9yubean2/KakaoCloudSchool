@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="width: 70%;">
+        <thead>
+            <th>품목</th>
+            <th>수량</th>
+            <th>단가</th>
+        </thead>
+        <tbody id = "tbody" style="text-align:center ;">
+
+        </tbody>  
+    </table>
+</body>
+</html>
+<script>
+    //ajax로 서버로 업어왔다고 가정
+    let data = [
+        {"name":"새우깡","count":2,"price":2000},
+        {"name":"꿀꽈배기","count":3,"price":2500},
+        {"name":"자갈치","count":4,"price":3000},
+        {"name":"맛동산","count":5,"price":3500},
+        {"name":"에이스","count":6,"price":4000}
+    ];
+
+    function loadData() {
+        //테이블 또는 tbody등에 대한 객체 참조를 가져온다
+        var tbody = document.getElementById("tbody");
+
+        //새로운 행 생성
+        for (item of data){
+            var row = tbody.insertRow( tbody.rows.length);
+        //테이블의 맨 마지막행에 행을 하나 추가한다
+        //행에 추가할 셀(td)을 생성
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2); 
+        cell1.innerHTML = item.name;
+        cell2.innerHTML = item.count;
+        cell3.innerHTML = item.price;
+        }
+        
+    }
+
+    window.onload = function() {
+        loadData();
+    }
+    
+</script>

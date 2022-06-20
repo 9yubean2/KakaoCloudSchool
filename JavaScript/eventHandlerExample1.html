@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Example 1</title>
+</head>
+<body>
+    <button type="button" style="background-color: rgb(133, 98, 203);" onclick="changeColor(this)"> 배경색 바꾸기</button>
+    <button type="button" style="background-color: rgb(77, 135, 180);" onclick="changeColor(this)"> 배경색 바꾸기</button>
+    <button type="button" style="background-color: rgb(92, 193, 148);" onclick="changeColor(this)"> 배경색 바꾸기</button>
+    <button type="button" style="background-color: rgb(231, 219, 96);" onclick="changeColor(this)"> 배경색 바꾸기</button>
+    <button type="button" style="background-color: rgb(240, 186, 99);" onclick="changeColor(this)"> 배경색 바꾸기</button>
+    <button type="button" style="background-color: rgb(254, 130, 126);" onclick="changeColor(this)"> 배경색 바꾸기</button>
+</body>
+</html>
+<script>
+    function changeColor(me) {
+        document.getElementsByTagName("body")[0].style.backgroundColor = 
+        me.style.backgroundColor;
+    }
+</script>

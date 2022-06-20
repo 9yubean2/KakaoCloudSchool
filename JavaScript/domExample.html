@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <h1 id="title1">TITLE1</h1>
+    <h1 id="title2">TITLE2</h1>
+    <h1 id="title3">TITLE3</h1>
+    
+</body>
+</html>
+<script>
+    document.getElementById('title1').innerHTML = "First Title";
+    document.getElementById('title2').innerHTML = "Second Title";
+    document.getElementById('title3').innerHTML = "Third Title";
+
+    /*
+    let ids = ["title1","title2","title3"];//id에 일관성이 없을 때 사용
+    for(i=0;i<ids.length;i++){
+        document.getElementById(ids[i]).style.color = "#ff0000";
+    }
+    */
+
+    //const는 상수라서 for문 안에서 임의로 변경 불가능
+   for(i=1;i<=3;i++){
+    document.getElementById("title"+i).style.backgroundColor = "#cccccc";
+   }
+</script>

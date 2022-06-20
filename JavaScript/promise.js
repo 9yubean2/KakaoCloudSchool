@@ -10,19 +10,19 @@ let promise = new Promise( function(resolve, reject){
             s+=i;
         }
         resolve(s);
-
+        //구문의 콜백함수의 매개변수로 전달된다.
     },5000);
     //reject("데이터 수신 오류"),1000);
 
 })
 .then((value)=>{
-    console.log(value);
+    console.log(value);//resolve
 })
 .catch((error)=>{
-    console.log(error);
+    console.log(error);//reject(에러)
 })
 .finally(
-    ()=>{console.log("Ending....")}
+    ()=>{console.log("Ending....")}//resolve던 reject던 상관없이 실행
 );
 
 console.log(promise)

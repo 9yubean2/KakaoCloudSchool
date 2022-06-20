@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ1</title>
+</head>
+<body>
+    <input type="text" name="value" id="num1" value="1"> <br/>
+    <input type="text" name="value" id="num2" value="2"> <br/>
+    <input type="text" name="value" id="num3" value="3"> <br/>
+    <input type="text" name="value" id="num4" value="4"> <br/>
+    <input type="text" name="value" id="num5" value="5"> <br/>
+    <input type="text" name="value" id="num6" value="6"> <br/>
+    <input type="text" name="value" id="num7" value="7"> <br/>
+    <input type="text" name="value" id="num8" value="8"> <br/>
+    <input type="text" name="value" id="num9" value="9"> <br/>
+    <input type="text" name="value" id="num10" value="10"> <br/>
+    --------------------------------- <br/>
+    <div id="result"></div>
+    <button type="button" onclick="goIdAdd()">합계구하기(ID)</button>
+    <button type="button" onclick="goNameAdd()">합계구하기(NAME)</button>
+</body>
+</html>
+<script>
+    
+    
+
+    function goIdAdd() {
+       var result = 0;
+        for (i=1;i<=10;i++){
+            result += parseInt(document.getElementById("num"+i).value);
+        }
+        console.log(result);
+        
+        
+        document.getElementById("result").innerHTML = `<h3>${result}</h3>`;
+    }
+
+    function goNameAdd() { 
+        let varList = document.getElementsByName("value");
+        
+        var result = 0;
+        /*
+        for (i=0; i<varList.length;i++){
+            result += parseInt(varList[i].value);
+        }*/
+        varList.forEach((x)=> result += parseInt(x.value));
+        
+        document.getElementById("result").innerHTML = `<h3>${result}</h3>`;
+     }
+    
+</script>
