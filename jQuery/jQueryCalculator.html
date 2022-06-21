@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    num1: <input type="text" id="num1"/><br/>
+    num2: <input type="text" id="num2"/><br/>
+    <button type="button" id="btnAdd" class="button">+</button>
+    <button type="button" id="btnSub" class="button">-</button>
+    <button type="button" id="btnMul" class="button">*</button>
+    <button type="button" id="btnDiv" class="button">/</button>
+
+    <div id="result"></div>
+</body>
+</html>
+<script>
+$(()=>{
+    /*
+    방법1
+    $("#btnAdd").click(()=>{
+        var num1 = $("#num1").val()
+        var num2 = $("#num2").val()
+        var result = parseInt(num1)+parseInt(num2);
+        $("#result").html(`<h3>${num1} + ${num2} = ${result}</h3>`);
+    });
+
+    $("#btnSub").click(()=>{
+        var num1 = $("#num1").val()
+        var num2 = $("#num2").val()
+        var result = parseInt(num1)-parseInt(num2);
+        $("#result").html(`<h3>${num1} - ${num2} = ${result}</h3>`);
+    });
+
+    $("#btnMul").click(()=>{
+        var num1 = $("#num1").val()
+        var num2 = $("#num2").val()
+        var result = parseInt(num1)*parseInt(num2);
+        $("#result").html(`<h3>${num1} * ${num2} = ${result}</h3>`);
+    });
+
+    $("#btnDiv").click(()=>{
+        var num1 = $("#num1").val()
+        var num2 = $("#num2").val()
+        var result = parseInt(num1)/parseInt(num2);
+        $("#result").html(`<h3>${num1} / ${num2} = ${result}</h3>`);
+    });
+    */
+
+    //방법2
+    $(".button").click((button)=>{
+        var num1 = parseInt($("#num1").val());
+        var num2 = parseInt($("#num2").val());
+        var result = 0;
+        if (button.target.id =="btnAdd")
+            result = num1+num2;
+        else if (button.target.id =="btnSub")
+            result = num1- num2;
+        else if (button.target.id =="btnMul")
+            result = num1* num2;
+        else 
+            result = num1 / num2
+        
+        $("#result").html(`<h3>${result}</h3>`);
+    });
+
+});
+</script>
