@@ -20,7 +20,38 @@
 				<th>Writer</th>
 				<th>View</th>
 			</thead>
+			<tbody id="tbody">
+			</tbody>
 		</table>
+		<p></p>
+		<ul id="list">
+		
+		</ul>		
 	</div>
 </body>
 </html>
+<script>
+let data= [
+	{id:1, title:"title-1", writer:"writer_1", view:11},
+	{id:2, title:"title-2", writer:"writer_2", view:22},
+	{id:3, title:"title-3", writer:"writer_3", view:33},
+	{id:4, title:"title-4", writer:"writer_4", view:44},
+	{id:5, title:"title-5", writer:"writer_5", view:55}
+]
+
+$(()=>{
+	init();
+});
+
+function init() {
+	data.forEach((item)=>{
+		$("#tbody:last")
+		.append(`<tr><td>\${item.id}</td><td>\${item.title}</td><td>\${item.writer}</td><td>\${item.view}</td></tr>`);
+	});
+	
+	data.forEach((item)=>{
+		$("#list:last")
+		.append(`<li>\${item.title}</li>`);
+	});
+}
+</script>
