@@ -7,6 +7,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<div id="demo"></div>
+	<button id="btnCall" type="button">Call</button>
 </body>
 </html>
+<script>
+window.onload=function(){
+	document.getElementById("btnCall").addEventListener("click",loadData);
+}
+
+function loadData(){
+	var xhttp = new XMLHttpRequest(); //비동기 통신 담당 객체
+	
+	//통신 중간중간 필드에 전달된 함수를 호출
+	xhttp.onreadystatechange = function(){
+		console.log(this.readyState, this.status);
+		if (this.readyState == 4 && this.status == 200){
+			document.getElementById("demo").innerHTML = this.responseText;
+		}
+	}
+	xhttp.open("GET","ajax_info.txt",true);
+	xhttp.send();
+}
+</script>
