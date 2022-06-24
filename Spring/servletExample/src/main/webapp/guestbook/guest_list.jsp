@@ -25,8 +25,8 @@
 				<td><%= dto.getId() %></td>
 				<td><a href="<%=request.getContextPath() %>/gbc?cmd=view&id=<%=dto.getId()%>">
 				<%=dto.getTitle() %></a></td>
-			
 				<td><%= dto.getWriter() %></td>
+				<td><%= dto.getContents() %></td>
 				<td><%= dto.getWdate() %></td>
 				<td><%= dto.getHit() %></td>
 			</tr>

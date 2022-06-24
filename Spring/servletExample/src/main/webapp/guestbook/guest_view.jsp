@@ -15,6 +15,7 @@
 	<%=data.getTitle() %><br/>
 	<%= data.getWriter() %><br/>
 	<%= data.getWdate() %><br/>
+	<%= data.getContents() %><br/>
 	<%= data.getHit() %><br/>
 	
 

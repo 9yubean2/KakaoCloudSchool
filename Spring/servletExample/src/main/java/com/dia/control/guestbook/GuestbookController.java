@@ -63,8 +63,8 @@ public class GuestbookController extends HttpServlet {
 		
 		GuestbookDTO dto = new GuestbookDTO();
 		dto.setTitle(request.getParameter("title"));
-		dto.setContents(request.getParameter("contents"));
 		dto.setWriter(request.getParameter("writer"));
+		dto.setContents(request.getParameter("contents"));
 		dto.setWdate("2022-06-24");
 		dto.setHit(0);
 		
