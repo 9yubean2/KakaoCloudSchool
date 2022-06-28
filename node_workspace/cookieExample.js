@@ -11,7 +11,7 @@ app.use(cookieParser());
 app.use("/setCookie",(req,res)=>{
     res.cookie("key1","test");//key는 String이지만 값은 String말고도 Object 저장 가능
     res.cookie("key2",{
-        userid:"test1234",
+        userid:"test2",
         username:"Anne"
     });
     res.end();
