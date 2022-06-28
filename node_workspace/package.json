@@ -1,0 +1,18 @@
+{
+  "name": "node_workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "asyncMode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "jade": "^1.11.0",
+    "nodemon": "^2.0.18"
+  }
+}
