@@ -17,7 +17,6 @@ print(s.count('o')) #4
 print("###############")
 print(str(list(range(0,10000))).count('8')) #4000
 
-
 print("###############")
 print('   .!!  hello world!     '.strip(' .!')) #hello world
 
