@@ -61,3 +61,5 @@ console.log(circle2_1.name ,circle2_2.name); //Circle2 상속받는 변수 바�
 
 circle2_1.__proto__.name = '__proto__로 접근하기~~';
 console.log(circle2_1.name ,circle2_2.name);//__proto__로 접근하기~~ __proto__로 접근하기~~
+
+
