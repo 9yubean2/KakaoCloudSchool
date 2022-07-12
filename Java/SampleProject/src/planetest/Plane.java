@@ -18,6 +18,7 @@ abstract public class Plane {
 	
 	public void refuel(int fuel) {
 		//this.fuelSize += fuel; field 직접 access 지양
+		System.out.println("");
 		this.setFuelSize(this.getFuelSize()+fuel);
 	}
 	
@@ -41,6 +42,5 @@ abstract public class Plane {
 	public void setFuelSize(int fuelSize) {
 		this.fuelSize = fuelSize;
 	}
-	
 	
 }

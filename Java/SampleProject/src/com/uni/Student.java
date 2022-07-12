@@ -11,8 +11,10 @@ public class Student extends Human {
 	
 	public Student(String name, int age, int height, int weight,String number, String major) {
 		super(name,age,height,weight);
-		this.number = number;
-		this.major = major;
+//		this.number = number;
+//		this.major = major;
+		this.setNumber(number);
+		this.setMajor(major);
 	}
 
 	//Getter&Setter

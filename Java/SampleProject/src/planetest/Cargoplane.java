@@ -13,7 +13,6 @@ public Cargoplane() {
 	
 	@Override
 	public void flight(int distance) {
-		System.out.println(distance+" 운항");
 		int s = distance / 10;
 		super.setFuelSize(getFuelSize() - 50 * s);
 		

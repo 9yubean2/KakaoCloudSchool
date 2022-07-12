@@ -9,7 +9,7 @@ abstract class PlaneTest {
 //		System.out.println(l747.getPlaneName()+" \t\t "+l747.getFuelSize());
 //		System.out.println(c40.getPlaneName()+" \t\t "+c40.getFuelSize()+"\n");
 //	}
-	//문서에 없는 method 생성 지
+	//문서에 없는 method 생성 지양
 	
 	public static void main(String[] args) {
 		//Airplane과 Cargoplane 객체 생성

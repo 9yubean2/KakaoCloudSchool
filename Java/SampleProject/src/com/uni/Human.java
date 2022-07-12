@@ -11,10 +11,14 @@ public class Human {
 	}
 
 	public Human(String name, int age, int height, int weight) {
-		this.name = name;
-		this.age = age;
-		this.height = height;
-		this.weight = weight;
+//		this.name = name;
+//		this.age = age;
+//		this.height = height;
+//		this.weight = weight;
+		this.setName(name);
+		this.setAge(age);
+		this.setHeight(height);
+		this.setWeight(weight);
 	}
 	
 	//Getter&Setter
