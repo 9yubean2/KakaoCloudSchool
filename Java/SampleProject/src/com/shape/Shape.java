@@ -1,8 +1,6 @@
 package com.shape;
 
-import java.awt.Point;
-
-public abstract class Shape{
+public abstract class Shape extends Point{
 	//fields
 	protected Point point;
 

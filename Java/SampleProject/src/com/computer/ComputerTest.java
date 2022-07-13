@@ -10,20 +10,20 @@ public class ComputerTest {
 		arrays[3] = new Tab("Tab02", 3, 2048, 1300);
 		
 		//모든 객체의 기본 정보를 출력한다.
-		System.out.println("name"+"\t"+"cpu"+"\t"+"memory"+ "\t"+" battery");
-		System.out.println("--------------------------------");
+		System.out.println("name"+"\t"+"cpu"+"\t"+"memory"+ "\t"+"   battery");
+		System.out.println("-----------------------------------");
 		for (int i = 0;i<arrays.length;i++) {
-			System.out.println(arrays[i].getName()+"\t "+arrays[i].getCpu()+" \t "+arrays[i].getMemory()+" \t "+arrays[i].getBattery());
+			System.out.println(arrays[i].getName()+"\t "+arrays[i].getCpu()+" \t "+arrays[i].getMemory()+" \t    "+arrays[i].getBattery());
 		}
 		
 		
-		System.out.println("\n\n"+"name"+"\t"+"cpu"+"\t"+"memory"+ "\t "+" battery"+"\t"+"rendering");
-		System.out.println("----------------------------------------------------");
+		System.out.println("\n\n"+"name"+"\t"+"cpu"+"\t"+"memory"+ "\t "+"  battery"+"\t"+"rendering");
+		System.out.println("--------------------------------------------------");
 		//모든 컴퓨터를 55씩 사용한 배터리의 변화 내용과 모든 객체size가 100인 이미지를 렌더링하는데 걸리는 시간을 출력
 		for (int i = 0;i<arrays.length;i++) {
 			arrays[i].operate(55);
 			
-			System.out.println(arrays[i].getName()+"\t "+arrays[i].getCpu()+" \t "+arrays[i].getMemory()+" \t  "+arrays[i].getBattery()+"\t\t"+String.format("%.2f",((Graphic) arrays[i]).rendering(100)));
+			System.out.println(arrays[i].getName()+"\t "+arrays[i].getCpu()+" \t "+arrays[i].getMemory()+" \t    "+arrays[i].getBattery()+"\t  "+String.format("%.2f",((Graphic) arrays[i]).rendering(100)));
 		}
 
 	}

@@ -1,7 +1,5 @@
 package com.shape;
 
-import java.awt.Point;
-
 public class Rectangle extends Shape implements Movable{
 	
 	//fields
@@ -42,7 +40,13 @@ public class Rectangle extends Shape implements Movable{
 	@Override
 	public void move(int x, int y) {
 		this.setPoint(new Point((int)(getPoint().getX()+x+2),(int)(getPoint().getY()+y+2)));
+		
 	}
+	
+	public String toString() {
+		return String.format("%s %5s %5s %5s", this.getClass().getSimpleName(),
+				this.getWidth(), this.getPoint().getX(), this.getPoint().getY());	
+	}	
 
 
 }

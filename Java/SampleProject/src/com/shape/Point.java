@@ -2,8 +2,8 @@ package com.shape;
 
 public class Point {
 	//fields
-	public int x;
-	public int y;
+	private int x;
+	private int y;
 	
 	//constructors
 	public Point() {

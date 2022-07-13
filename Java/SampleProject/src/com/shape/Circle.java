@@ -1,5 +1,4 @@
 package com.shape;
-import java.awt.Point;
 
 public class Circle extends Shape implements Movable{
 	
@@ -29,17 +28,25 @@ public class Circle extends Shape implements Movable{
 	//methods
 	@Override
 	public double getArea() {
-		return Math.PI*this.radius*this.radius;
+		return Math.PI*this.getRadius()*this.getRadius();
 	}
 
 	@Override
 	public double getCircumference() {
-		return 2*Math.PI*this.radius;
+		return 2*Math.PI*this.getRadius();
 	}
 	
 	@Override
 	public void move(int x, int y) {
-		this.setPoint(new Point((int)(getPoint().getX()+(x+1)),(int)(getPoint().getY()+(y+1))));
+		//this.setPoint(new Point((int)(getPoint().getX()+(x+1)),(int)(getPoint().getY()+(y+1))));
+		getPoint().setX(getPoint().getX()+(x+1));
+		getPoint().setY(getPoint().getY()+(y+1));
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%9s %5s %5s %5s",this.getClass().getSimpleName(),
+				this.getRadius(), this.getPoint().getX(), this.getPoint().getY());
 	}
 
 

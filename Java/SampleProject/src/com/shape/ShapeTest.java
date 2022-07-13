@@ -14,14 +14,11 @@ public class ShapeTest {
 		
 		
 		//모든 객체의 넓이 정보와 둘레 정보를 출력(for, 소수점첫자리에서 반올림해서)
-		System.out.println("구분"+"\t\t"+"길이"+"\t"+"x좌표"+"\t"+"y좌표"+"\t"+"Area"+"\t"+"Circumference");
+		System.out.println(String.format("%9s %5s %5s %5s %5s %10s","구분","길이","x좌표","y좌표","Area","Circumference"));
 		for (Shape s : list) {
-			if(s.getClass().getSimpleName().compareTo("Rectangle")==0) {		
-				System.out.println(s.getClass().getSimpleName()+"\t"+((Rectangle) s).getWidth()+"\t"+(int)(((Rectangle)s).getPoint().getX())+"\t"+(int)(((Rectangle)s).getPoint().getY())+"\t"+String.format("%.0f",((Rectangle)s).getArea())+"\t"+String.format("%.0f",((Rectangle)s).getCircumference()));
-			}
-			else {
-				System.out.println(s.getClass().getSimpleName()+"\t\t"+((Circle) s).getRadius()+"\t"+(int)(((Circle) s).getPoint().getX())+"\t"+(int)(((Circle)s).getPoint().getY())+"\t"+String.format("%.0f",((Circle)s).getArea())+"\t"+String.format("%.0f",((Circle)s).getCircumference()));
-			}
+			System.out.println(s.toString() + "\t" 
+		+ String.format("%.0f", s.getArea()) + "\t"
+					+ String.format("%.0f", s.getCircumference())); 
 			
 		}		
 
