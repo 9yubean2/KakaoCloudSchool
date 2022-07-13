@@ -11,4 +11,4 @@ for i in range(len(arr)):
     for k in range(n):
         if arr[i][k+1] > aver:
             count += 1
-    print('{0:.3f}'.format(count/n*100))
+    print('{0:.3f}%'.format(count/n*100))
