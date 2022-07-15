@@ -22,11 +22,11 @@ public class ThreadExample01 {
 		Thread01_1 t1 = new Thread01_1();
 		
 		Thread01_2 r = new Thread01_2();
-		Thread t2 = new Thread(r);
+		Thread t2 = new Thread(r,"runnable thread");
 		
-		//multicore 환경에서는 우선순위의 의미가 없음
-		t1.setPriority(10);
-		t2.setPriority(2);
+//		//multicore 환경에서는 우선순위의 의미가 없음
+//		t1.setPriority(10);
+//		t2.setPriority(2);
 		
 		t1.start();
 		t2.start();

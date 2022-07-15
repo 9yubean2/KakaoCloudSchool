@@ -5,19 +5,8 @@ class DeprecatedOverriding implements Runnable{
 	volatile boolean suspended = false;
 	volatile boolean stopped = false;
 
-//	@Override
-//	public void run() {
-//		while (!stopped && !suspended) {
-//			System.out.println(Thread.currentThread().getName());
-//			try {
-//				Thread.sleep(1000);
-//			} catch (Exception e) {
-//				// TODO: handle exception
-//			}
-//		}
-//	}
 
-		@Override
+	@Override
 	public void run() {
 		while(!stopped) {
 			if(!suspended) {
@@ -27,6 +16,9 @@ class DeprecatedOverriding implements Runnable{
 				} catch (Exception e) {
 					// TODO: handle exception
 				}
+			}
+			else {
+				Thread.yield();//busy waiting현상을 제거하기 위해
 			}
 		}
 	}
@@ -42,7 +34,9 @@ class DeprecatedOverriding implements Runnable{
 	public void resume() {
 		suspended = false;
 	}
+	
 }
+
 public class DeprecatedOverridingExample {
 	public static void main(String[] args) {
 		

@@ -18,6 +18,7 @@ class ThreadDeprecated implements Runnable{
 
 public class DeprecatedExample {
 	public static void main(String[] args) {
+		
 		ThreadDeprecated r = new ThreadDeprecated();
 		Thread t1 = new Thread(r,"*"); //두번째 인자는 Thread의 이름
 		Thread t2 = new Thread(r,"**"); //두번째 인자는 Thread의 이름

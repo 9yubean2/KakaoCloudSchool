@@ -4,7 +4,6 @@ class Sleep1 extends Thread{
 	@Override
 	public void run() {
 		try {
-			//t1.sleep(2000);//의미가 없어... 현재 실행 되는 thread를 재우는거니까
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			
@@ -18,6 +17,7 @@ class Sleep1 extends Thread{
 	}
 
 }
+
 class Sleep2 extends Thread{
 	@Override
 	public void run() {
@@ -28,6 +28,7 @@ class Sleep2 extends Thread{
 	}
 
 }
+
 public class SleepExample {
 	public static void main(String[] args) {
 		Sleep1 t1 = new Sleep1();
