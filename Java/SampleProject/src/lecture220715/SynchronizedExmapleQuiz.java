@@ -5,8 +5,8 @@ class SharedObject{
 	public void printName() {
 		
 		synchronized (this) {
-			try {
-				
+			try {    
+
 				for(int i =0;i<10;i++) {
 					Thread.sleep(1000);
 					System.out.println(Thread.currentThread().getName()+":"+i);
