@@ -14,17 +14,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import lecture0721.simplebooksearch.service.BookService;
-import org.apache.commons.dbcp2.BasicDataSource;
 
-import javax.sql.DataSource;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Properties;
+
 
 //View
 public class SimpleBookSearch extends Application {
