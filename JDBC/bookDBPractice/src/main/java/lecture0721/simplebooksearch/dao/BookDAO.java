@@ -21,7 +21,7 @@ public class BookDAO {
     public BookDAO(){
         try {
 
-            basicDS = new BasicDataSource();
+            BasicDataSource basicDS = new BasicDataSource();
             Properties properties = new Properties();
 
             InputStream is = new FileInputStream("properties/db.properties");

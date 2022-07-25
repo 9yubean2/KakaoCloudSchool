@@ -1,11 +1,10 @@
-package lecture0721.simplebooksearch.vo;
+package refactoring.vo;
 //VO,DTO 역할
 //데이터 이동 수단
 public class BookVO {
     private String bisbn;
     private String btitle;
     private String bauthor;
-
 
     public BookVO() {
 

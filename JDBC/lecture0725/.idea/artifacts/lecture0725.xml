@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="lecture0725">
+    <output-path>$PROJECT_DIR$/out/artifacts/lecture0725</output-path>
+    <root id="root">
+      <element id="module-output" name="lecture0725" />
+    </root>
+  </artifact>
+</component>
