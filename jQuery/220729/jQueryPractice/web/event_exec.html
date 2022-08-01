@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>220801 Event_Exec</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/event_exec.js"></script>
+    <style>
+        .myStyle {
+            color: #ff5959;
+            background-color: #ffca27;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="hs">홍길동</li>
+        <li>김길동</li>
+        <li>이순신</li>
+        <li>신사임당</li>
+    </ul>
+
+    <button id="btnAdd" type="button">Add</button>
+</body>
+</html>
+<script>
+    $(()=>{
+        $("li").mouseenter(function(){
+            $(this).addClass("myStyle");
+        });
+
+        $("li").mouseleave(function(){
+            $(this).removeClass();
+        });
+    });
+
+
+</script>

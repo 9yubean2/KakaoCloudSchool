@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jQueryPractice:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/jQueryPractice_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="jQueryPractice/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jQueryPractice" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
