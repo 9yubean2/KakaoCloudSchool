@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BookSearchProject/BookSearchProject.iml" filepath="$PROJECT_DIR$/BookSearchProject/BookSearchProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BookStoreProject/BookStoreProject.iml" filepath="$PROJECT_DIR$/BookStoreProject/BookStoreProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticeProject/PracticeProject.iml" filepath="$PROJECT_DIR$/PracticeProject/PracticeProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServletSample/ServletSample.iml" filepath="$PROJECT_DIR$/ServletSample/ServletSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/servlet.iml" filepath="$PROJECT_DIR$/.idea/servlet.iml" />
+    </modules>
+  </component>
+</project>

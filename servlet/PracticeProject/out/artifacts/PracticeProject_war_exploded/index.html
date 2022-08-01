@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    이름을 입력하세요<br><br>
+    <!--form action="http://localhost:8080/html/hello.jsp" method="POST"--><!-- 현재 파일과 같은 위상에서 파일을 탐색 -->
+    <!--form action="/hello.jsp" method="POST"--><!--이렇게 하면 http://localhost:8080/   이렇게 까지만 path를 잡아줌-->
+    <form action="/html/hello.jsp" method="POST">
+        이름 : <input type="text" name="userName"/>
+        <input type="submit" value="Send"/>
+    </form>
+</body>
+</html>
