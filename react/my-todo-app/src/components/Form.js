@@ -11,7 +11,8 @@ export default function Form({todoData,setTodoData,value,setValue}) {
         let newTodo = {
           id: Date.now(),//유니크한 값을 표현하기 위해
           title: value,
-          completed:false
+          completed:false,
+          editMode:false
         }
     
         setTodoData([...todoData,newTodo]);
