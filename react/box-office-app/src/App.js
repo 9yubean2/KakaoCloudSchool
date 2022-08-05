@@ -9,21 +9,125 @@ export default function App() {
 
   const [movieList,setMovieList]= useState([  ]);
 
+
+  const optionNow = {
+
+    url:'https://api.themoviedb.org/3/movie/now_playing',
+    method:'GET',
+    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+            api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+            language:'ko-KR',
+            region:'KR'},
+    responseType:'json'
+
+  }
  
+
   const option = {
 
     url:'https://api.themoviedb.org/3/movie/popular',
     method:'GET',
-    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36'},
+    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+            language:'ko-KR'},
+    responseType:'json'
+
+  }
+
+  const optionTopRate = {
+
+    url:'https://api.themoviedb.org/3/movie/top_rated',
+    method:'GET',
+    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+            language:'ko-KR'},
     responseType:'json'
 
   }
 
   let resultList = [];
 
+  const now = () =>{
+    
+    axios(optionNow)
+    .then(function(response){
+      let results = response.data.results;
+
+      results.map((result)=>{
+        let newList = {
+          id: `${result.id}`,//유니크한 값을 표현하기 위해
+          title: `${result.title}`,
+          posterPath:`${result.poster_path}`,
+          releaseDate:`${result.release_date}`,
+          average:`${result.vote_average}`,
+          popularity: `${result.popularity}`,
+          language:`${result.original_language}`        
+        }
+        console.log(newList);
+        resultList.push(newList);
+      })
+
+      console.log(resultList);
+      
+      
+    })
+    .catch(function(){
+      alert('Fail to Loading..');
+    })
+    .finally(function(){
+      alert('Done!');
+      console.log(movieList);
+      
+      console.log(resultList);
+      setMovieList(resultList); 
+      // movieList.map((movie)=>{
+      //   console.log(movie.title);
+      // })
+    })
+  }
+
   const search = () =>{
     
     axios(option)
+    .then(function(response){
+      let results = response.data.results;
+
+      results.map((result)=>{
+        let newList = {
+          id: `${result.id}`,//유니크한 값을 표현하기 위해
+          title: `${result.title}`,
+          posterPath:`${result.poster_path}`,
+          releaseDate:`${result.release_date}`,
+          average:`${result.vote_average}`,
+          popularity: `${result.popularity}`,
+          language:`${result.original_language}`        
+        }
+        console.log(newList);
+        resultList.push(newList);
+      })
+
+      console.log(resultList);
+      
+      
+    })
+    .catch(function(){
+      alert('Fail to Loading..');
+    })
+    .finally(function(){
+      alert('Done!');
+      console.log(movieList);
+      
+      console.log(resultList);
+      setMovieList(resultList); 
+      // movieList.map((movie)=>{
+      //   console.log(movie.title);
+      // })
+    })
+  }
+
+
+
+  const topRate = () =>{
+    
+    axios(optionTopRate)
     .then(function(response){
       let results = response.data.results;
 
@@ -74,21 +178,16 @@ export default function App() {
             MOVIE LIST
           </h1>
         </div>
-        <div >
-          <input type='date'className='w-96 px-3 py-2 mr-4 text-gray-500 border rounded shadow'/>
-          <button className="h-10 px-4 rounded bg-[#66add4] text-white"
-            onClick={search}>SEARCH</button>
-        </div>
-        <nav className="py-4 px-6 text-sm font-medium m-8">
-          <ul className="flex space-x-3">
+        <nav className="text-sm font-medium mb-10">
+          <ul className="flex items-center space-x-5">
             <li>
-              <p className="block px-3 py-2 rounded-md bg-sky-500 text-white">TOP RATED</p>
+              <button className="block px-3 py-2 rounded-md bg-sky-500 text-white" onClick={now}>NOW PLAYING</button>
             </li>
             <li>
-              <p className="block px-3 py-2 rounded-md bg-sky-500 text-white">TOP RATED</p>
+              <button className="block px-3 py-2 rounded-md bg-sky-500 text-white" onClick={search}>POPULAR</button>
             </li>
             <li>
-              <p className="block px-3 py-2 rounded-md bg-sky-500 text-white">TOP RATED</p>
+              <button className="block px-3 py-2 rounded-md bg-sky-500 text-white" onClick={topRate}>TOP RATED</button>
             </li>
           </ul>
         </nav>

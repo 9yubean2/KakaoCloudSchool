@@ -6,7 +6,7 @@ const Lists = ({movieList,setMovieList}) => {
     {movieList.map((movie) => (
         // <div className="bg-gray-100 flex items-center justify-between w-full px-2 py-1 mx-1 my-2 text-gray-600  border rounded">
     
-      <article className="flex items-start space-x-6 p-6">
+      <article className="flex space-x-8 p-6">
         <img src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`} alt="" width="80" height="100" className="flex-none rounded-md bg-slate-100" />
         <div className="min-w-0 relative flex-auto">
         <p className="text-slate-400">{`#${movie.id}`}</p>
@@ -22,26 +22,21 @@ const Lists = ({movieList,setMovieList}) => {
               <dd>{movie.average}</dd>
             </div>
             <div>
-              <dt className="sr-only">Rating</dt>
-              <dd className="px-1.5 ring-1 ring-slate-200 rounded">{movie.language}</dd>
+              <p className="px-1.5 ring-1 ring-slate-200 rounded">{movie.language}</p>
             </div>
             <div className="ml-2">
-              <dt className="sr-only">Year</dt>
-              <dd>{movie.releaseDate}</dd>
+              <p>{movie.releaseDate}</p>
             </div>
             
             <div>
-              <dt className="sr-only">Runtime</dt>
-              <dd className="flex items-center">
                 <svg width="2" height="2" fill="currentColor" className="mx-2 text-slate-300" aria-hidden="true">
                   <circle cx="1" cy="1" r="1" />
                 </svg>
                 {""}
-              </dd>
             </div>
             <div className="flex-none w-full mt-2 font-normal">
-              <dt className="sr-only">Cast</dt>
-              <dd className="text-slate-400">{movie.popularity}</dd>
+              <p className="text-slate-300">popularity</p>
+              <p className="text-slate-400">{movie.popularity}</p>
             </div>
             </dl>
         </div>
