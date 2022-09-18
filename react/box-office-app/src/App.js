@@ -14,8 +14,7 @@ export default function App() {
 
     url:'https://api.themoviedb.org/3/movie/now_playing',
     method:'GET',
-    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36',
-            api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+    params:{api_key:'My',
             language:'ko-KR',
             region:'KR'},
     responseType:'json'
@@ -27,7 +26,7 @@ export default function App() {
 
     url:'https://api.themoviedb.org/3/movie/popular',
     method:'GET',
-    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+    params:{api_key:'My',
             language:'ko-KR'},
     responseType:'json'
 
@@ -37,7 +36,7 @@ export default function App() {
 
     url:'https://api.themoviedb.org/3/movie/top_rated',
     method:'GET',
-    params:{api_key:'84dcca61f9944a6e09e7dfcf27364b36',
+    params:{api_key:'My',
             language:'ko-KR'},
     responseType:'json'
 
